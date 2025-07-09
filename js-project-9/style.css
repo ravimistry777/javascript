@@ -1,0 +1,91 @@
+body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0fdf4, #e0f7fa);
+      overflow-x: hidden;
+    }
+    .navbar {
+      background-color: #2e7d32;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #fff !important;
+    }
+    .nav-link {
+      color: #fff !important;
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 2px;
+      background: #fff;
+      transition: 0.4s;
+    }
+    .nav-link:hover::after {
+      width: 80%;
+    }
+    .hero {
+      display: none;
+    }
+    .product-section {
+      display: none;
+      animation: fadeSlide 0.5s ease-in-out;
+    }
+    .product-section.active {
+      display: block;
+    }
+    @keyframes fadeSlide {
+      0% {opacity: 0; transform: translateY(20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    .product-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: none;
+      border-radius: 16px;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .product-image {
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
+    .cart-img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    #cartPanel {
+      width: 350px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background: white;
+      z-index: 2000;
+      overflow-y: auto;
+      box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+      transition: right 0.4s ease;
+    }
+    #cartPanel.open {
+      right: 0;
+    }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2e7d32;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      display: none;
+    }
