@@ -1,0 +1,21 @@
+body {
+      padding: 2rem;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+    }
+    .card {
+      margin-bottom: 1rem;
+    }
+    #results {
+      margin-top: 2rem;
+    }
+    #chartContainer {
+      max-height: 600px;
+    }
+    .custom-title {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
